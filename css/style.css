@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333333;
+  text-align: center;
+}
+
+.scroll-effect {
+  height: 100vh;
+  /* Stop the background from repeating/tiling */
+  background-repeat: no-repeat;
+  /* stretch background to cover element */
+  background-size: cover;
+  /* so certain part of the background image */
+  background-position: center;
+  /* scroll content over background */
+  background-attachment: fixed;
+  /* we want to position our h3's at the bottom of our sections. position absolute only works if we select which elements we want to position relative to... otherwise it jumps to the top of the page. So we apply position:relative to the sections*/
+  position: relative;
+}
+
+/* Header */
+header {
+  background-image: url(../images/header.jpg);
+  /* set the height of the element to 100% of the view port height */
+}
+
+/* position nav section */
+nav {
+  /* to put things in the middle of an element */
+  /* position: absolute;
+  top: 50px;
+  left: 50px;
+  transform: translate(-50%, -50%) */
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  transition: all 1.4s;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  /* Both these rules move the arrow half of its width to the left */
+  transform: translatey(-50%);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+nav a {
+  padding: 15px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #FFFFFF
+}
+
+nav a:hover {
+  color: #EED821;
+}
+
+/* Annoucement */
+.highlight {
+  background-color: #E3E8EA;
+  padding: 50px 0;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.feature {
+  text-align: center;
+  padding: 50px 0;
+  margin: 0 auto;
+  max-width: 750px
+}
+
+p {
+  margin-bottom: 60px;
+}
+
+#filter1 {
+  background-image: url(../images/one.jpg);
+}
+
+#filter2 {
+  background-image: url(../images/two.jpg);
+}
+
+#filter3 {
+  background-image: url(../images/three.jpg);
+}
+
+#filter4 {
+  background-image: url(../images/four.jpg);
+}
+
+#filter5 {
+  background-image: url(../images/five.jpg);
+}
+
+h3 {
+  color: white;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 300;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+}
+
+/* subscribe */
+.subscribe, footer {
+  background-color: #eed821;
+  padding: 50px 0;
+}
+
+/* this is styling our email text field /* input[type="email"] */
+.email {
+  width: 60%;
+  border: 2px white solid;
+  padding: 8px;
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 18px;
+  transition: border 0.5s;
+}
+
+.email:focus {
+  border: 2px solid #333333
+}
+
+.button, button {
+  width: 60%;
+  background-color: transparent;
+  border: 2px solid #333333;
+  border-radius: 5px;
+  padding: 10px;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  margin-bottom: 40px;
+}
+
+.button:hover, {
+  color: white;
+  border-color: white;
+}
+
+footer a {
+  text-decoration: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 10px;
+  color: #333333
+}
+
+small {
+  color: white;
+}
+
+/* about page styles */
+.about {
+  background-image: url(../images/three.jpg);
+}
+
+.gallery {
+  /* flexbox allows us to align itemas vertically and horizontally */
+  /* to use flexbox */
+  /* 1. apply displat:flex */
+  display: flex;
+  /* 2 set the flex direction */
+  flex-direction: row;
+  /* 3 Align the items either horizontally using justify-content or vertically align-items */
+  justify-content: center;
+  /* 4. set whether you want the items to wrap onto different lines */
+  flex-wrap: wrap;
+}
+
+.gallery-image {
+  height: 200px;
+  margin: 0 0 20px 20px;
+}
+
+/* Pricing */
+.pricing {
+  background-image: url(../images/header.jpg);
+  height: auto;
+  padding: 50px 0;
+  color: white;
+}
+
+/* pricing cards */
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.card {
+  padding-bottom: : 50px;
+  background: #f2f2f2;
+  border-radius: 5px;
+  margin: 10px;
+  /* This property sets the width of our design */
+  flex-basis: 250px;
+}
+
+.big-card {
+  transform: scalex(1.12);
+}
+
+.big-card button {
+  background: #eede00;
+}
+
+button:hover {
+  background: #333333;
+  color: white;
+  text-decoration: none;
+}
+
+h4 {
+  background: #808080;
+  height: 80px;
+  border-radius: 5px 5px 0 0;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
+  list-style: none;
+  color: #333333;
+  margin-bottom: 25px;
+}
+
+li {
+  height: 20px;
+  margin: 10px auto;
+}
+
+/* mobile styles */
+@media screen and (max-width:770px) {
+  .scroll-effect {
+    background-attachment: scroll;
+  }
+
+  nav {
+    position: static;
+    padding: 20px;
+  }
+
+  .subscribe, .highlight, .feature {
+    padding: 20px;
+  }
+
+  .button, .email {
+    width: 100%;
+  }
